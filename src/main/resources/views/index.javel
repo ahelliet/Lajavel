@@ -1,0 +1,56 @@
+<html>
+<head>
+<link href="/css/bulma.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar container" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://github.com/DamienDabernat/Lajavel" target="_blank">
+      <img src="/images/logo_small.png?raw=true·" height="200%">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item"  href="/">
+        Lajavel
+      </a>
+
+      <a class="navbar-item" href="/get-started">
+        Get Started
+      </a>
+
+      <a class="navbar-item" href="/contributors">
+        Contributors
+      </a>
+
+    </div>
+
+    <div class="navbar-end">
+        <div class="navbar-item">
+            <div class="buttons">
+                <a class="button is-primary" target="_blank" href="https://github.com/DamienDabernat/Lajavel">
+                    <strong>Github</strong>
+                </a>
+            </div>
+        </div>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+    {{ partner1.name }}
+    <br>
+
+    {% for partner in partners %}
+        <li><p>{{ partner.name }}</p></li>
+    {% endfor %}
+</main>
+</body>
+</html>
