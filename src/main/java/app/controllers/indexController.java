@@ -13,6 +13,6 @@ public class indexController extends Controller {
     public static void index (Response response) {
         List<Partner> partners = PartnerRepository.findAll();
 
-        response.html(View.render("index", Map.entry("partner1", partners.get(1))));
+        response.html(View.render("index", Map.entry("partners", partners)));
     }
 }

@@ -1,7 +1,5 @@
 package lajavel;
 
-import lajavel.facades.Log;
-
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -49,13 +47,11 @@ public class View {
         StringBuffer stringBuffer = new StringBuffer();
         String rawHtml = getViewContentFromName(viewName);
         Matcher matcher = Pattern.compile("\\{\\{(.*?)\\}\\}").matcher(rawHtml);
-        Matcher listMatcher = Pattern.compile("\\{% for (\\w*) in (\\w*) %\\}\n"
+        Matcher listMatcher = Pattern.compile("\\{% forEach (\\w*) in (\\w*) %\\}\n"
                 + "(.*)\n"
-                + "\\s*\\{% endfor %\\}").matcher(rawHtml);
+                + "\\s*\\{% endforEach %\\}").matcher(rawHtml);
 
 
-        listMatcher.find();
-        Log.error(listMatcher.group(1));
 
         while (matcher.find()) {
             String rawStringOfAnObject = matcher.group(1).replaceAll("\\s+", "");

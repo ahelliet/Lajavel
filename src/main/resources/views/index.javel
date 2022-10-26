@@ -48,9 +48,9 @@
     {{ partner1.name }}
     <br>
 
-    {% for partner in partners %}
+    {% forEach partner in partners %}
         <li><p>{{ partner.name }}</p></li>
-    {% endfor %}
+    {% endforEach %}
 </main>
 </body>
 </html>
